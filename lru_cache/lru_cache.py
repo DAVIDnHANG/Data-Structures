@@ -22,11 +22,7 @@ class LRUCache:
     """
 
     def get(self, key):
-        # if key exists
-        # print("self.storage : ", self.storage)
-        # print("\n\n\n")
-        # print("self.storage[key].value : ", self.storage[key].value)
-        # print("\n\n\n")
+
         if key in self.storage:
             # move the key to the tail of the dll (mra)
             currNode = self.storage[key]
@@ -54,9 +50,7 @@ class LRUCache:
         # When receiving an input, we check first if the input exists already in our LRU
         # print("self.storage[key] : ", self.storage[key])
         if key in self.storage:
-            # If the input exists, we update the value in the
-            # storageionary with the new given value
-            # self.storage.update(key=value)
+
             currNode = self.storage[key]
             currNode.value = (key, value)
             # then move the input to the tail
@@ -67,8 +61,7 @@ class LRUCache:
          # check if LRU is full
 
         elif self.count < self.limit:
-            # if not full, add to storage
-            # then add to tail (most recently accessed) in the linked list
+
             self.dll.add_to_tail((key, value))
             self.storage[key] = self.dll.tail
             # increment count by 1
@@ -95,12 +88,5 @@ class LRUCache:
 
 testLRU = LRUCache()
 testLRU.set("orange", "you glad")
-# testLRU.set("banana", "I didn't say")
-# testLRU.set("ten", "its ten")
-# print("count : ", testLRU.count)
 print("get : ", testLRU.get('orange'))
 
-
-# print("testLRU.dll.head.value : ", testLRU.dll.head.value.value)
-# print("testLRU.dll.head.value : ", testLRU.dll.tail.value)
-# # print()
