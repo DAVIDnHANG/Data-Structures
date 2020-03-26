@@ -1,5 +1,5 @@
-from dll_stack_bst import Stack
-from dll_queue_bst import Queue
+from queue_and_stack.dll_stack import Stack
+from queue_and_stack.dll_queue import Queue
 
 
 class BinarySearchTree:
@@ -110,20 +110,5 @@ class BinarySearchTree:
             if node.right:
                 queue.enqueue(node.right)
 
-    # Print the value of every node, starting with the given node,
-    # in an iterative depth first traversal
-
     def dft_print(self, node):
-        # create stack
-
-        # STRETCH Goals -------------------------
-        # Note: Research may be required
-
-        # Print In-order recursive DFT
-
-    def pre_order_dft(self, node):
-        pass
-
-    # Print Post-order recursive DFT
-    def post_order_dft(self, node):
-        pass
+        #create stack
